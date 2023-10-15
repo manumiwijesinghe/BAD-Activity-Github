@@ -37,4 +37,19 @@ def Word_Bender():
             print()
             time.sleep(1.0)
             break
-        print ()
+        print()
+              
+        guessedletter = input("Guess a letter:")  # Giving chance to guess a letter
+        guessedletter = guessedletter.lower()
+        if guessedletter == "":  # Check if user input a letter or not
+            print("Please input a letter!")
+            print("You have", +tries, "tries left")
+        else:
+            guessedletter = guessedletter[
+                0]  # Consider only the fist letter, if user input multiple letters at one try
+
+            if guessedletter in guessedletters:  # Check whether user input a letter that he/she entered in previous tries
+                print("You have entered this letter before. Please enter a new letter!")
+                print("You have", +tries, "tries left")
+                print()
+
