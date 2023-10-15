@@ -10,7 +10,7 @@ time.sleep(1)
 
 def Word_Bender():
     word =random.choice(WDictionary)
-    words=words.lower()
+    words=word.lower()
     RLetter=random.choice(words)#selecting random letter to show
     print("*****************************************")
     print(""+name,"be ready to play the game!!!")
