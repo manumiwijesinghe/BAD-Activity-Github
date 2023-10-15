@@ -19,3 +19,22 @@ def Word_Bender():
     time.sleep(0.5)
     guessedletters = RLetter + " _" * (len(words) - 1)
     tries = 10
+
+# Create a while loop to repeat the code
+    while tries > 0:
+        F = 0 #count how many times user will fail
+        for letter in words:
+            #print the correct guesses
+            if letter in guessedletters:
+                print(letter, end=" ")
+
+            else:
+                print("_", end=" ")
+                F += 1
+        print()
+        if  F == 0: #When there isn't any failuer user will win
+            print("Congratulations.!!! " + name, "You won!")
+            print()
+            time.sleep(1.0)
+            break
+        print ()
