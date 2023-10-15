@@ -59,3 +59,14 @@ def Word_Bender():
                     print("Correct Guess")
                     print("You have", +tries, "tries left")
                     print()
+
+                else: #check whether the guess is wrong
+                    tries -= 1  #If it is a wrong guess number of tries will deduct by 1
+                    print("Wrong Guess")
+                    print("You have", + tries, 'tries left')
+                    print()
+
+                    if tries == 0:#When the number of tries = 0 player will loss the game
+                        print("Oops," + name, "You Lost!")
+                        print("The word was:"+words)
+                        time.sleep(1.0)
